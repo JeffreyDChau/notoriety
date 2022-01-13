@@ -3,20 +3,21 @@ function changeColor() {
   // Use the Mozilla Developer Network resource to find the right way to change
   // the background for this div 
   /* Your Code Goes Here */
-  blueDiv.style.backgroundColor ="green";
-  
+  //blueDiv.style.backgroundColor ="green";
+  blueDiv.setAttribute("class", "green half")
   
 
 }
 
 function replaceWord() {
   var wordable = document.getElementById('wordable');
-
+  var axios = require("axios").default;
+  
   fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "wordsapiv1.p.rapidapi.com",
-      "x-rapidapi-host": "91b4866cf8mshaf4078eba316917p132b33jsn2011191e658c",
+      "x-rapidapi-key": "91b4866cf8mshaf4078eba316917p132b33jsn2011191e658c",
+      "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
     },
   })
     .then((response) => {
